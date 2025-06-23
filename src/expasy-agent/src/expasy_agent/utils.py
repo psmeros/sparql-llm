@@ -68,7 +68,7 @@ def load_chat_model(configuration: Configuration) -> BaseChatModel:
             model=model_name,
             temperature=configuration.temperature,
         )
-    return init_chat_model(model_name, model_provider=provider)
+    return init_chat_model(model_name, model_provider=provider, seed=configuration.seed)
 
 
 def get_message_text(msg: BaseMessage) -> str:
